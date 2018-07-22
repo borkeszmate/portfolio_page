@@ -1,0 +1,122 @@
+@import '~sass/base';
+@import '~sass/variables';
+@import '~sass/utilities';
+@import '~sass/animations';
+@import '~sass/mixins';
+
+
+.split-screen{
+ display: flex;
+ justify-content: space-around;
+ // background-color: tan;
+ height: 100vh;
+ color: white;
+ text-shadow: 1px 1px 9px black;
+ background-color: white;
+
+ &__left{
+  // background-color: yellow;
+  flex: 0 0 50%;
+  position: relative;
+  text-align: center;
+  background-image: 
+  // linear-gradient(to right, rgba($color-primary,0.5), rgba($color-primary,0.30)),
+  url('../../../assets/img/dev.jpeg');
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+   
+  h5{
+    font-size: 3.5rem;
+   }
+   h6{
+    font-size: 2rem;
+    font-weight: 300;
+   }
+  
+   &__overlay{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+
+    &__text{
+     position: absolute;
+     width: 100%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+    }
+   }
+
+   &:hover &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background-color:rgba($color-primary, .6);
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s;
+   }
+
+ }
+
+
+
+
+ &__right{
+  flex: 1;
+  position: relative;
+  text-align: center;
+  background-image: 
+   url('../../../assets/img/online_marketing_2.jpg');
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  
+  h5{
+   font-size: 3.5rem;
+  }
+  h6{
+   font-size: 2rem;
+   font-weight: 300;
+  }
+
+    &__overlay{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+
+    &__text{
+     position: absolute;
+     width: 100%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+    }
+   }
+
+   &:hover &__overlay{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 75%;
+    height: 100%;
+    background-color:rgba($color-primary, .6);
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s;
+   }
+ }
+}
