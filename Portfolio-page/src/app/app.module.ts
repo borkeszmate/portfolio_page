@@ -15,6 +15,7 @@ import { SplitScreenComponent } from './components/split-screen/split-screen.com
 import { ProjectsService } from './sevices/projects-service.service';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
+/* Packages */
 
 @NgModule({
   declarations: [

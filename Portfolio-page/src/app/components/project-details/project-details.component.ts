@@ -9,7 +9,7 @@ import { Project } from '../../Models/Project/ProjectModel';
 export class ProjectDetailsComponent implements OnInit {
 
   ProjectDetails: Project;
-  isProjectLoaded: boolean = false;
+  isProjectLoaded = false;
 
   constructor(private Projects_Service: ProjectsService) { }
   ngOnInit() {
