@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../Models/Project/ProjectModel';
+import { Subject } from 'rxjs/subject';
 
 @Injectable()
 export class ProjectsService {
@@ -27,6 +28,9 @@ Projects: Project[] = [
     category: 'Sitebuilding no Bootstrap'
   }
 ];
+
+ProjectSubject: Subject<any> = new Subject();
+
   constructor() { }
 
 }

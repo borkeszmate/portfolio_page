@@ -13,6 +13,7 @@ import { SplitScreenComponent } from './components/split-screen/split-screen.com
 
 /* SERVICES */
 import { ProjectsService } from './sevices/projects-service.service';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProjectsService } from './sevices/projects-service.service';
     NavbarComponent,
     HeroComponent,
     ProjectsListComponent,
-    SplitScreenComponent
+    SplitScreenComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule
