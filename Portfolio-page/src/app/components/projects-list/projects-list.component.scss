@@ -1,5 +1,11 @@
+@import '~sass/base';
+@import '~sass/variables';
+@import '~sass/utilities';
+@import '~sass/animations';
+@import '~sass/mixins';
+
 .projects-list{
- min-height: 50rem;
+ 
 
  h4{
   font-size: 4rem;

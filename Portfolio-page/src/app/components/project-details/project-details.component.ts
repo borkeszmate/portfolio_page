@@ -9,12 +9,14 @@ import { Project } from '../../Models/Project/ProjectModel';
 export class ProjectDetailsComponent implements OnInit {
 
   ProjectDetails: Project;
+  isProjectLoaded: boolean = false;
 
   constructor(private Projects_Service: ProjectsService) { }
   ngOnInit() {
     this.Projects_Service.ProjectSubject.subscribe(ClickedProject => {
       this.ProjectDetails = ClickedProject;
       console.log(this.ProjectDetails);
+      this.isProjectLoaded = true;
     });
   }
 

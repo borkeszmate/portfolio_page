@@ -5,7 +5,9 @@
     <ul class="projects-list__container">
     <li *ngFor="let Project of Projects; let i = index" class="projects-list__container__item"
     (click)="getClickedProject(i)"
-    >{{Project.name}}</li>
+    >
+    <a href="#project-details-section"></a>{{Project.name}}
+  </li>
     
     </ul>
   </section>

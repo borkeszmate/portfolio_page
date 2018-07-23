@@ -1,0 +1,16 @@
+@import '~sass/base';
+@import '~sass/variables';
+@import '~sass/utilities';
+@import '~sass/animations';
+@import '~sass/mixins';
+
+.project-details{
+    min-height: 80vh;
+    border: 1px solid black;
+    text-align: center;
+  &__project-name{
+    font-weight: 700;
+    font-size: 5rem;
+  }
+
+}
