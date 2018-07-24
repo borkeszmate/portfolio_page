@@ -28,6 +28,15 @@
    
   h5{
     font-size: 3.5rem;
+    a{
+      text-decoration: none;
+      color: white;
+      transition: all .3s;
+    }
+    a:hover{
+      font-size: 3.6rem;
+      transition: all .5s;
+    }
    }
    h6{
     font-size: 2rem;
