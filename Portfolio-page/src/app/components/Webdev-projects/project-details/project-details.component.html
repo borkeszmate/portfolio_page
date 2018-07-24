@@ -1,0 +1,22 @@
+<div class="row">
+  <section
+   id="project-details-section" 
+   class="project-details"
+   *ngIf="isProjectLoaded"
+   >
+    <h4 class="project-details__project-name">{{ProjectDetails?.name}}</h4>
+    <p class="project-details__project-body">{{ProjectDetails?.body}}</p>
+    <div class="project-details__project-img">
+      <img [src]="ProjectDetails.picture" alt="">
+    </div>  
+    <div class="project-details__cta">
+      <div class="project-details__cta__btn">
+        <a href="#" class="btn btn-primary">View the code on GitHub</a>
+      </div>
+      <div class="project-details__cta__github">
+        <img [src]="GitHubLogo" alt="">
+      </div>
+    </div>
+  </section>
+
+</div>

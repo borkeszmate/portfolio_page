@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../Models/Project/ProjectModel';
+import { Project } from '../../../Models/Project/ProjectModel';
 import { Subject } from 'rxjs/subject';
 
 @Injectable()
@@ -23,7 +23,7 @@ Projects: Project[] = [
   {
     name: 'Flexy',
     body: 'This is my first Flexbox project where I build a whole site (without functionality) relying heavily on the great Flexbox. The project is originally based on Udemy course "Advanced CSS and Sass by Jonas Schmedtmann" but I always implement as much of my own thoughs as possible.',
-    picture: '../../../assets/img/online_marketing_2.jpg',
+    picture: 'https://www.elegantthemes.com/blog/wp-content/uploads/2017/07/wordpress-lorem-ipsum.png',
     github_url: 'https://github.com/borkeszmate/FlexboxProject',
     category: 'Sitebuilding no Bootstrap'
   }
