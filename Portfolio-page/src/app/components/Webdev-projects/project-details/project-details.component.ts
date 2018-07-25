@@ -16,7 +16,7 @@ export class ProjectDetailsComponent implements OnInit {
   ngOnInit() {
     this.Projects_Service.ProjectSubject.subscribe(ClickedProject => {
       this.ProjectDetails = ClickedProject;
-      console.log(this.ProjectDetails);
+      // console.log(this.ProjectDetails);
       this.isProjectLoaded = true;
     });
   }

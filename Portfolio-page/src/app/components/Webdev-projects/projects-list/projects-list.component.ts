@@ -15,8 +15,12 @@ export class ProjectsListComponent implements OnInit {
     body: '',
     picture: '',
     github_url: '',
-    category: ''
+    category: '',
+    technologies: []
   };
+  ProjectTypes = ['Angular', 'Bootstrap'];
+  FilteredProjects: Project[];
+
   constructor( private Projects_Service: ProjectsService) { }
 
   ngOnInit() {
@@ -25,9 +29,19 @@ export class ProjectsListComponent implements OnInit {
 
   public getClickedProject(clickedProjectNumber) {
     this.ClickedProject = this.Projects[clickedProjectNumber];
-    console.log(this.ClickedProject);
+    // console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
+
   }
 
-}
+  public filterByTechnologies(Projects, ProjectType) {
+    console.log(`megdurrantottad a ${ProjectType} gombot`);
+    Projects.filter(project => {
+      if (project.technologies.includes(ProjectType)) {
+        this.FilteredProjects.push(project);
+      }
+    })
+    console.log(this.FilteredProjects);
+  }
+

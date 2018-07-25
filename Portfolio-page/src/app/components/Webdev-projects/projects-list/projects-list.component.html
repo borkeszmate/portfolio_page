@@ -7,11 +7,16 @@
     (click)="getClickedProject(i)"
     >
     <a 
-    routerLink="/webdev-projects#project-details-section"
+    href="/webdev-projects#project-details-section"
     
     >{{Project.name}}</a>
   </li>
     
     </ul>
+     <div 
+     class="projects-list__filter"
+     *ngFor="let ProjectType of ProjectTypes"
+     >
+       <button (click)="filterByTechnologies(Projects, ProjectType)">{{ProjectType}}</button> </div>
   </section>
 </div>
