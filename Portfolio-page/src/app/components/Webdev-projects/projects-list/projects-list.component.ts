@@ -18,18 +18,27 @@ export class ProjectsListComponent implements OnInit {
     category: '',
     technologies: []
   };
-  ProjectTypes = ['Angular', 'Bootstrap'];
+  ProjectTypes;
   FilteredProjects: Project[];
 
   constructor( private Projects_Service: ProjectsService) { }
 
   ngOnInit() {
     this.Projects = this.Projects_Service.Projects;
+    this.ProjectTypes = this.Projects_Service.Projects
+    .map(project => this.ProjectTypes)
+      .reduce((a, b) => {
+        return a.concat(b);
+      });
+    ;
+
+    console.log(this.ProjectTypes);  
   }
+  
 
   public getClickedProject(clickedProjectNumber) {
     this.ClickedProject = this.Projects[clickedProjectNumber];
-    // console.log(this.ClickedProject);
+// console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
 
@@ -37,11 +46,7 @@ export class ProjectsListComponent implements OnInit {
 
   public filterByTechnologies(Projects, ProjectType) {
     console.log(`megdurrantottad a ${ProjectType} gombot`);
-    Projects.filter(project => {
-      if (project.technologies.includes(ProjectType)) {
-        this.FilteredProjects.push(project);
-      }
-    })
-    console.log(this.FilteredProjects);
-  }
 
+    const currentFilteredProjects = Projects.filter(project => project.technologies == ProjectType)
+    console.log(currentFilteredProjects);
+  }}
