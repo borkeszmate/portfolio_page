@@ -15,8 +15,14 @@
     </ul>
      <div 
      class="projects-list__filter"
-     *ngFor="let ProjectType of ProjectTypes"
+     *ngFor="let ProjectTechnology of ProjectTechnologies"
      >
-       <button (click)="filterByTechnologies(Projects, ProjectType)">{{ProjectType}}</button> </div>
+       <button (click)="filterByTechnology(ProjectTechnology)">{{ProjectTechnology}}</button> </div>
+       <div>
+         <h2>The projects are filtered by:</h2>
+         <ul *ngFor="let filterItem of FilterByTechArr">
+           <li>{{filterItem}}</li>
+         </ul>
+       </div> 
   </section>
 </div>

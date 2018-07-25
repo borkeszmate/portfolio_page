@@ -37,7 +37,8 @@ Projects: Project[] = [
     github_url: 'https://github.com/borkeszmate/FlexboxProject',
     category: 'Sitebuilding no Bootstrap',
     technologies: ['Angular', 'Bootstrap']
-  },
+  }
+  /*,
   {
     name: 'Example Boostrap Project',
     body: 'This is an example only Bootstrap sitebuilding project, I will upload the rest of my projects later ',
@@ -77,7 +78,15 @@ Projects: Project[] = [
     github_url: 'https://github.com/borkeszmate/FlexboxProject',
     category: 'Sitebuilding no Bootstrap',
     technologies: ['Sass', 'ES6']
-  }
+  },
+  {
+    name: 'Example Project',
+    body: 'This is an example project, I will upload the rest of my projects later ',
+    picture: 'https://www.elegantthemes.com/blog/wp-content/uploads/2017/07/wordpress-lorem-ipsum.png',
+    github_url: 'https://github.com/borkeszmate/FlexboxProject',
+    category: 'Sitebuilding no Bootstrap',
+    technologies: ['Új Technológia', 'React']
+  } */
 ];
 
 ProjectSubject: Subject<any> = new Subject();
