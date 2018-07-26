@@ -20,7 +20,7 @@ export class ProjectsListComponent implements OnInit {
   };
   ProjectTechnologies;
   FilterByTechArr = [];
-  FilteredProjects;
+  FilteredProjects=[];
 
   constructor( private Projects_Service: ProjectsService) { }
 
@@ -28,6 +28,7 @@ export class ProjectsListComponent implements OnInit {
     this.Projects = this.Projects_Service.Projects;
     this.gettingUniqueTechnologies();
     // console.log(this.ProjectTechnologies);
+    
 
   }
 
@@ -36,7 +37,7 @@ export class ProjectsListComponent implements OnInit {
 // console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
-  }
+  } 
 
   public gettingUniqueTechnologies() {
     // Getting project technologies from Projects service
@@ -66,10 +67,22 @@ export class ProjectsListComponent implements OnInit {
       // If clicked technology is not in the array then push it into it.
       this.FilterByTechArr.push(ProjectTechnology);
     }
-    // console.log(this.FilterByTechArr);
-
-
-    // console.log(this.FilteredProjects);
+    
+    if ( this.FilterByTechArr.length > 1){
+      // More elements
+    } else{
+      // Only 1 filter element
+      this.Projects.forEach(project => {
+        
+        if (project.technologies.includes(this.FilterByTechArr.join())) {
+          this.FilteredProjects.push(project);
+          
+        } 
+      })
     }
+    console.log(this.FilteredProjects);
+    }
+
+
 
 }
