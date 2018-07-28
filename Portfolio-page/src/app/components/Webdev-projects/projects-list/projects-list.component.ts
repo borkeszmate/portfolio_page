@@ -20,7 +20,7 @@ export class ProjectsListComponent implements OnInit {
   };
   ProjectTechnologies;
   FilterByTechArr = [];
-  FilteredProjects=[];
+  FilteredProjects = [];
 
   constructor( private Projects_Service: ProjectsService) { }
 
@@ -28,7 +28,6 @@ export class ProjectsListComponent implements OnInit {
     this.Projects = this.Projects_Service.Projects;
     this.gettingUniqueTechnologies();
     // console.log(this.ProjectTechnologies);
-    
 
   }
 
@@ -37,7 +36,7 @@ export class ProjectsListComponent implements OnInit {
 // console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
-  } 
+  }
 
   public gettingUniqueTechnologies() {
     // Getting project technologies from Projects service
@@ -63,22 +62,61 @@ export class ProjectsListComponent implements OnInit {
       const index = this.FilterByTechArr.indexOf(ProjectTechnology);
       // console.log(index);
       this.FilterByTechArr.splice(index, 1 );
+
+      // Remove filtered projects from array when technology is clicked second time
+      this.FilteredProjects.forEach((ProjectToRemove, Index) => {
+       if (ProjectToRemove.technologies.includes(ProjectTechnology)) {
+         this.FilteredProjects.splice(Index, 1);
+
+        //  console.log(Index);
+        //  console.log('Eltávolítás lefut');
+       } else {
+        //  console.log('Eltávolítás nem fut le');
+       }
+      });
     } else {
       // If clicked technology is not in the array then push it into it.
       this.FilterByTechArr.push(ProjectTechnology);
+
     }
-    
-    if ( this.FilterByTechArr.length > 1){
+
+    console.log(this.FilterByTechArr);
+    if ( this.FilterByTechArr.length > 1) {
       // More elements
-    } else{
+      console.log('Legalább 2 elem a filter tömbben');
+      this.Projects.forEach(projectItem => {
+        // console.log(projectItem.technologies.indexOf('Flexbox'));
+        // console.log(this.FilterByTechArr);
+
+        this.FilterByTechArr.forEach(filterItem => {
+          console.log(filterItem);
+          if (projectItem.technologies.indexOf(filterItem) > -1) {
+            this.FilteredProjects.push(projectItem);
+          }
+        }
+      );
+        // if (projectItem.technologies ===
+        //   this.FilterByTechArr.forEach(filterItem => filterItem)
+        // ) {
+
+        // }
+      });
+    } else {
+      console.log('Csak egy elem a filter tömbben');
       // Only 1 filter element
       this.Projects.forEach(project => {
-        
+        // console.log(this.FilterByTechArr.join());
         if (project.technologies.includes(this.FilterByTechArr.join())) {
-          this.FilteredProjects.push(project);
-          
-        } 
-      })
+          // Check if the FilteredProject array is empty
+          if (this.FilteredProjects.length === 0 || this.FilteredProjects === undefined ) {
+            this.FilteredProjects.push(project);
+          } else {
+            // Check if project is already displayed
+
+          }
+
+        }
+      });
     }
     console.log(this.FilteredProjects);
     }
