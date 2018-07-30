@@ -21,6 +21,7 @@ export class ProjectsListComponent implements OnInit {
   ProjectTechnologies;
   FilterByTechArr = [];
   FilteredProjects = [];
+  isFiltered = false;
 
   constructor( private Projects_Service: ProjectsService) { }
 
@@ -89,7 +90,18 @@ export class ProjectsListComponent implements OnInit {
         );
       });
 
+      // Check if filtered
+      if (this.FilteredProjects.length > 0) {
+        this.isFiltered = true;
+      } else {
+        this.isFiltered = false;
+      }
+
     }
+
+  public clearFilter() {
+    this.FilteredProjects = [];
+  }
 
 
 
