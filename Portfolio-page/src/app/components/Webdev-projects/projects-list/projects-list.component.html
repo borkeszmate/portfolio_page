@@ -1,6 +1,6 @@
 
 <div class="row">
-  <section class="projects-list">
+  <div class="projects-list">
     <h4>Please, select from the Projects below!</h4>
     <ul class="projects-list__container">
     <li *ngFor="let Project of Projects; let i = index" class="projects-list__container__item"
@@ -8,11 +8,11 @@
     >
     <a 
     href="/webdev-projects#project-details-section"
-    
     >{{Project.name}}</a>
-  </li>
-    
+      </li>  
     </ul>
+  </div>
+
      <div 
      class="projects-list__filter"
      *ngFor="let ProjectTechnology of ProjectTechnologies"
@@ -30,11 +30,10 @@
           <ul *ngFor="let FilteredProject of FilteredProjects">
             <li>
               <h5>{{FilteredProject.name}}</h5>
-              <h6>{{FilteredProject.technologies}}</h6>
+              <!-- <h6>{{FilteredProject.technologies}}</h6> -->
 
             </li>
           </ul>
         </div>
 
-  </section>
 </div>
