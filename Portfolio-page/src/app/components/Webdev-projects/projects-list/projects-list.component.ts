@@ -22,6 +22,7 @@ export class ProjectsListComponent implements OnInit {
   FilterByTechArr = [];
   FilteredProjects = [];
   isFiltered = false;
+  btnStyle;
 
   constructor( private Projects_Service: ProjectsService) { }
 
@@ -51,7 +52,7 @@ export class ProjectsListComponent implements OnInit {
     const uniqueArray = [];
     ProjectTechArr.forEach(ProjectType => {
       if (uniqueArray.indexOf(ProjectType) === -1) {
-        uniqueArray.push(ProjectType);
+          uniqueArray.push(ProjectType);
       }
     });
     this.ProjectTechnologies = uniqueArray;
@@ -73,6 +74,7 @@ export class ProjectsListComponent implements OnInit {
     } else {
       // If clicked technology is not in the array then push it into it.
       this.FilterByTechArr.push(ProjectTechnology);
+
     }
     console.log(this.FilteredProjects);
 

@@ -2,18 +2,30 @@
 <div class="row">
   <!-- All projects -->
 <section id="project-list">
+  <!-- Actual active filtering -->
+  <h2 *ngIf="isFiltered" >Projects are filtered by:</h2>
   <div class="project-filtering">
-    <ul
-      *ngFor="let ProjectTechnology of ProjectTechnologies"
-      class="project-filtering__ProjectTechnologies">
- 
-      <div 
-      class="project-filtering__ProjectTechnologies__item"
-      (click)="filterByTechnology(ProjectTechnology)">
-        <a>{{ProjectTechnology}}</a>
-      </div>
-
-    </ul>
+    <div
+      class="project-filtering__filteredBy">
+      <ul *ngFor="let filteredByTechnology of FilterByTechArr">
+        <li class="project-filtering__filteredBy__item"
+         (click)="filterByTechnology(filteredByTechnology)">
+          {{filteredByTechnology}}
+        </li>
+      </ul>
+    </div>
+<!-- Inactive filtering -->
+    <div class="project-filtering__ProjectTechnologies" >
+      <ul *ngFor="let ProjectTechnology of ProjectTechnologies">
+  
+        <li
+        [ngStyle]="{'display' : FilterByTechArr.includes(ProjectTechnology) ? 'none' : 'block' }"
+        class="project-filtering__ProjectTechnologies__item"
+        (click)="filterByTechnology(ProjectTechnology)">
+          <a>{{ProjectTechnology}}</a>
+        </li>
+      </ul>
+    </div>
 
   </div>
   <div 
