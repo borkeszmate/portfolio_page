@@ -4,47 +4,65 @@
 @import '~sass/animations';
 @import '~sass/mixins';
 
+.headings{
+  display: flex;
+  &__filteredBy{
+    flex: 0 0 50%;
+    background-color: yellow;
+  }
+  &__ProjectTechnologies{
+    flex: 1;
+    text-align: center;
+    background-color: yellowgreen;
+  }
+}
 .project-filtering{
   display: flex;
   justify-content: space-between;
-  margin: 1rem 2rem;
+  margin: 2rem 0rem;
     &__filteredBy{
     // margin: 1rem 2rem; 
-    background-color: $color-gray-1;
+    // background-color: $color-gray-1;
     display: flex;
     flex-wrap: wrap;
    
    &__item{
    padding: 1rem 1rem;
    text-transform: uppercase;
-   // border: 1px solid $color-primary;
-   // border-radius: 5%;
-   font-size: 2rem;
+   border-bottom: 1px solid black;
+   font-size: 1.5rem;
    margin: .5rem .5rem;
    cursor: pointer;
    transition: all .3s;
    list-style-type: none;
+   animation-name: moveUp;
+   animation-duration: .5s;
+   
+
    a{
     text-decoration: none;
-    color: $color-primary;
+    color: black;
+    }
+    i{
+      margin-left: .5rem;
     }
    } 
   &__item:hover{
-   // border-radius: 10%;
-   // border: 1px solid $color-primary;
+   border-radius: 10%;
+
    transition: all .5s;
-   background-color: $color-primary;
-   
+   background-color: black;
    a{
     color: white;
-
+   }
+   i{
+     color: white;
    }
   }
 
   }  
 
   &__ProjectTechnologies{
-    // margin: 1rem 2rem;
     background-color: $color-gray-1;
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +76,8 @@
    margin: .5rem .5rem;
    cursor: pointer;
    transition: all .3s;
+   animation-name: moveUp;
+   animation-duration: .5s;
    list-style-type: none;
    a{
     text-decoration: none;
