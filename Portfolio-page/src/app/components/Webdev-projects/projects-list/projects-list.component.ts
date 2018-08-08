@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Project } from '../../../Models/Project/ProjectModel';
 import { ProjectsService } from '../sevices/projects-service.service';
 
@@ -15,7 +15,7 @@ export class ProjectsListComponent implements OnInit {
     body: '',
     picture: '',
     github_url: '',
-    category: '',
+    preview_url: '',
     technologies: []
   };
   ProjectTechnologies;
@@ -24,18 +24,20 @@ export class ProjectsListComponent implements OnInit {
   isFiltered = false;
   btnStyle;
 
-  constructor( private Projects_Service: ProjectsService) { }
+  constructor( private Projects_Service: ProjectsService,
+    private ElRef: ElementRef
+  ) { }
 
   ngOnInit() {
     this.Projects = this.Projects_Service.Projects;
     this.gettingUniqueTechnologies();
     console.log(this.ProjectTechnologies);
 
+
   }
 
   public getClickedProject(clickedProjectNumber) {
     this.ClickedProject = this.Projects[clickedProjectNumber];
-// console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
   }

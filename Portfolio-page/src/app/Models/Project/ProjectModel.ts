@@ -3,6 +3,6 @@ export interface Project {
  body: string;
  picture: string;
  github_url: string;
- category: string;
+ preview_url: string;
  technologies: string[];
 }
