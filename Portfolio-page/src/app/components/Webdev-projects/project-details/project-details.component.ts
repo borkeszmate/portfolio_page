@@ -18,6 +18,13 @@ export class ProjectDetailsComponent implements OnInit {
       this.ProjectDetails = ClickedProject;
       // console.log(this.ProjectDetails);
       this.isProjectLoaded = true;
+
+      if (this.ProjectDetails.name === '') {
+        this.isProjectLoaded = false;
+        console.log(this.isProjectLoaded);
+      } else {
+        console.log('false');
+      }
     });
   }
 

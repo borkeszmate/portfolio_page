@@ -24,9 +24,7 @@ export class ProjectsListComponent implements OnInit {
   isFiltered = false;
   btnStyle;
 
-  constructor( private Projects_Service: ProjectsService,
-    private ElRef: ElementRef
-  ) { }
+  constructor( private Projects_Service: ProjectsService) { }
 
   ngOnInit() {
     this.Projects = this.Projects_Service.Projects;
@@ -73,6 +71,7 @@ export class ProjectsListComponent implements OnInit {
           console.log(ProjectToRemove.technologies.includes(ProjectTechnology));
        }
       });
+    this.clearClickedProject();
     } else {
       // If clicked technology is not in the array then push it into it.
       this.FilterByTechArr.push(ProjectTechnology);
@@ -105,6 +104,18 @@ export class ProjectsListComponent implements OnInit {
 
   public clearFilter() {
     this.FilteredProjects = [];
+  }
+
+  public clearClickedProject() {
+    this.ClickedProject = {
+      name: '',
+      body: '',
+      picture: '',
+      github_url: '',
+      preview_url: '',
+      technologies: []
+    };
+    this.Projects_Service.ProjectSubject.next(this.ClickedProject);
   }
 
 
