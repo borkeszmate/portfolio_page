@@ -10,12 +10,19 @@
       <img [src]="ProjectDetails.picture" alt="">
     </div>  
     <div class="project-details__cta">
+
       <div class="project-details__cta__btn">
-        <a href="#" class="btn btn-primary">View the code on GitHub</a>
+        <a [href]="ProjectDetails.github_url" target="black" class="btn btn-primary">View the code on GitHub</a>
       </div>
-      <div class="project-details__cta__github">
+
+      <div class="project-details__cta__btn">
+        <a [href]="ProjectDetails.preview_url" target="black" class="btn btn-secondary">Check out in action</a>
+      </div>
+
+      <!-- <div class="project-details__cta__github">
         <img [src]="GitHubLogo" alt="">
-      </div>
+      </div> -->
+
     </div>
   </section>
 
