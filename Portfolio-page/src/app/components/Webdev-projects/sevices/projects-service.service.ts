@@ -25,11 +25,19 @@ Projects: Project[] = [
   {
     name: 'Company Onepager',
     body: "This is a simple Bootstrap company website. I built this website based on Brad Traversy's Bootstrap course back in 2017. As all my projects based on online courses it contains my own solution and it is of course not just the copy of the course project.",
-    picture: '../../../assets/img/online_marketing_2.jpg',
-    github_url: 'https://github.com/borkeszmate/FlexboxProject',
-    preview_url: 'Sitebuilding no Bootstrap',
+    picture: '../../../assets/img/projects/Company_page.png',
+    github_url: 'https://github.com/borkeszmate/Sitebuilding_Bootstrap_Company_site',
+    preview_url: 'https://borkeszmate.github.io/Sitebuilding_Bootstrap_Company_site/src/',
     technologies: ['Bootstrap']
   },
+  {
+    name: 'CMS Admin',
+    body: "This is a Bootstrap admin page. I built this website based on Brad Traversy's Bootstrap course back in 2017. As all my projects based on online courses it contains my own solution and it is of course not just the copy of the course project.",
+    picture: '../../../assets/img/projects/CMS_admin.png',
+    github_url: 'https://github.com/borkeszmate/Sitebuilding_Bootstrap_Company_site',
+    preview_url: 'https://borkeszmate.github.io/Sitebuilding_Bootstrap_Admin_dashboard/src/',
+    technologies: ['Bootstrap']
+  }
 ];
 
 ProjectSubject: Subject<any> = new Subject();
