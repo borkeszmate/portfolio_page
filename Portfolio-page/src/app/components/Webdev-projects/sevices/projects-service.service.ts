@@ -44,8 +44,25 @@ Projects: Project[] = [
     picture: '../../../assets/img/projects/Weather_app.png',
     github_url: 'https://github.com/borkeszmate/vanilla_js_projects_weather_app',
     preview_url: 'https://borkeszmate.github.io/vanilla_js_projects_weather_app/',
-    technologies: ['Bootstrap', 'ES6', 'Local Storage']
+    technologies: ['Bootstrap', 'JavaScript', 'ES6', 'Local Storage', 'HTTP Requests']
+  },
+  {
+    name: 'UTM Parameter Builder',
+    body: "This extremely simple app is good for creating simple UTM parameters.",
+    picture: '../../../assets/img/projects/UTM_Parameter_Builder.png',
+    github_url: 'https://github.com/borkeszmate/vanilla_js_projects_UTM_builder',
+    preview_url: 'https://borkeszmate.github.io/vanilla_js_projects_UTM_builder',
+    technologies: ['Bootstrap', 'JavaScript']
+  },
+  {
+    name: 'GitHub Finder',
+    body: "This project is based on a online JS course I took. It uses modern ES6 classes and fetch api to get user date from the Github API.",
+    picture: '../../../assets/img/projects/GitHub_Finder.png',
+    github_url: 'https://github.com/borkeszmate/vanilla_js_projects_UTM_builder',
+    preview_url: 'https://borkeszmate.github.io/vanilla_js_projects_github_finder/',
+    technologies: ['Bootstrap', 'JavaScript', 'ES6', 'HTTP Requests']
   }
+
 ];
 
 ProjectSubject: Subject<any> = new Subject();
