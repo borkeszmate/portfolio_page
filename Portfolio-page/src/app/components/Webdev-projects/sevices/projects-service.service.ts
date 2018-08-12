@@ -12,7 +12,7 @@ Projects: Project[] = [
     picture: '../../../assets/img/projects/Coding_space.png',
     github_url: 'https://github.com/borkeszmate/SiteBuilding_Coding_Space',
     preview_url: 'https://borkeszmate.github.io/SiteBuilding_Coding_Space/',
-    technologies: ['Sass', 'Floats']
+    technologies: ['Sass', 'Regular Floats']
   },
   {
     name: 'Flexy',
@@ -37,6 +37,14 @@ Projects: Project[] = [
     github_url: 'https://github.com/borkeszmate/Sitebuilding_Bootstrap_Company_site',
     preview_url: 'https://borkeszmate.github.io/Sitebuilding_Bootstrap_Admin_dashboard/src/',
     technologies: ['Bootstrap']
+  },
+  {
+    name: 'The Weather App',
+    body: "This pure JavaScript project uses ES6 classes and async fetch to get data from external api.  Enter a Hungary based city location and get the actual weather from Wunderground API. You can save your frequently used location. (Stored in Local Storage).",
+    picture: '../../../assets/img/projects/Weather_app.png',
+    github_url: 'https://github.com/borkeszmate/vanilla_js_projects_weather_app',
+    preview_url: 'https://borkeszmate.github.io/vanilla_js_projects_weather_app/',
+    technologies: ['Bootstrap', 'ES6', 'Local Storage']
   }
 ];
 

@@ -35,7 +35,13 @@ export class ProjectsListComponent implements OnInit {
   }
 
   public getClickedProject(clickedProjectNumber) {
-    this.ClickedProject = this.Projects[clickedProjectNumber];
+
+    if (this.isFiltered) {
+      this.ClickedProject = this.FilteredProjects[clickedProjectNumber];
+    } else {
+      this.ClickedProject = this.Projects[clickedProjectNumber];
+    }
+    console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
   }
