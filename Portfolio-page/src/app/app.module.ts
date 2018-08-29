@@ -13,6 +13,8 @@ import { WebdevProjectsComponent } from './components/webdev-projects/webdev-pro
 
 /* SERVICES */
 import { ProjectsService } from './components/Webdev-projects/sevices/projects-service.service';
+import { WebDevSkillsComponent } from './components/Webdev-projects/web-dev-skills/web-dev-skills.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     ProjectsListComponent,
     SplitScreenComponent,
     ProjectDetailsComponent,
-    WebdevProjectsComponent
+    WebdevProjectsComponent,
+    WebDevSkillsComponent
   ],
   imports: [
     BrowserModule,

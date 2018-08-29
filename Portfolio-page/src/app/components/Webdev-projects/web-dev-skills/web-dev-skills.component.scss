@@ -1,0 +1,41 @@
+@import '~sass/base';
+@import '~sass/variables';
+@import '~sass/utilities';
+@import '~sass/animations';
+@import '~sass/mixins';
+
+.title{
+ text-align: center;
+ margin: 5rem 0;
+ h1{
+  font-size: 4rem;
+ }
+}
+
+.skills{
+ display: flex;
+ 
+  &__item{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex: 1;
+   padding: 3rem;
+   background-color: red;
+
+
+   &__icon{
+    padding: 2rem;
+    background-color: $color-primary;
+    border-radius: 3%;
+    i{
+     color: white;
+     font-size: 6rem;
+    }
+   }
+   &__text{
+    text-align: center;
+   }
+
+  }
+}

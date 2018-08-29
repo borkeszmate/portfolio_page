@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+  import { Component, OnInit, ElementRef } from '@angular/core';
 import { Project } from '../../../Models/Project/ProjectModel';
 import { ProjectsService } from '../sevices/projects-service.service';
 
@@ -10,6 +10,7 @@ import { ProjectsService } from '../sevices/projects-service.service';
 export class ProjectsListComponent implements OnInit {
 
   Projects: Project[];
+
   ClickedProject: Project = {
     name: '',
     body: '',
@@ -18,11 +19,12 @@ export class ProjectsListComponent implements OnInit {
     preview_url: '',
     technologies: []
   };
+
   ProjectTechnologies;
   FilterByTechArr = [];
   FilteredProjects = [];
   isFiltered = false;
-  btnStyle;
+
 
   constructor( private Projects_Service: ProjectsService) { }
 
@@ -33,6 +35,9 @@ export class ProjectsListComponent implements OnInit {
 
 
   }
+
+
+
 
   public getClickedProject(clickedProjectNumber) {
 
@@ -45,6 +50,10 @@ export class ProjectsListComponent implements OnInit {
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
   }
+
+
+
+
 
   public gettingUniqueTechnologies() {
     // Getting project technologies from Projects service
@@ -63,6 +72,11 @@ export class ProjectsListComponent implements OnInit {
     });
     this.ProjectTechnologies = uniqueArray;
   }
+
+
+
+
+
 // Filter array for filtering displayed projects by technologies. Method is fired when Technology is clicked in the template.
   public filterByTechnology(ProjectTechnology) {
 // If the clicked technology is already in the array remove from it by click
@@ -74,16 +88,15 @@ export class ProjectsListComponent implements OnInit {
       this.FilteredProjects.forEach((ProjectToRemove, Index) => {
         if (ProjectToRemove.technologies.includes(ProjectTechnology) ) {
          this.FilteredProjects.splice(Index);
-          console.log(ProjectToRemove.technologies.includes(ProjectTechnology));
+
        }
       });
     this.clearClickedProject();
     } else {
       // If clicked technology is not in the array then push it into it.
       this.FilterByTechArr.push(ProjectTechnology);
-
     }
-    console.log(this.FilteredProjects);
+
 
 // Adding projects to filtered project array
         this.Projects.forEach(projectItem => {
@@ -98,15 +111,19 @@ export class ProjectsListComponent implements OnInit {
           }
         );
       });
+      this.checkIfFiltered();
 
-      // Check if filtered
+    }
+
+    // Check if filtered
+    public checkIfFiltered() {
       if (this.FilteredProjects.length > 0) {
         this.isFiltered = true;
       } else {
         this.isFiltered = false;
       }
 
-    }
+   }
 
   public clearFilter() {
     this.FilteredProjects = [];
