@@ -14,6 +14,8 @@ import { WebdevProjectsComponent } from './components/webdev-projects/webdev-pro
 /* SERVICES */
 import { ProjectsService } from './components/Webdev-projects/sevices/projects-service.service';
 import { WebDevSkillsComponent } from './components/Webdev-projects/web-dev-skills/web-dev-skills.component';
+import { WebDevHeroSectionComponent } from './components/Webdev-projects/web-dev-hero-section/web-dev-hero-section.component';
+
 
 
 const appRoutes: Routes = [
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     SplitScreenComponent,
     ProjectDetailsComponent,
     WebdevProjectsComponent,
-    WebDevSkillsComponent
+    WebDevSkillsComponent,
+    WebDevHeroSectionComponent
   ],
   imports: [
     BrowserModule,
