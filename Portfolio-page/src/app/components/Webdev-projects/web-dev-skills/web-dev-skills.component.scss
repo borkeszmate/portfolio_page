@@ -14,7 +14,6 @@
 
 .skills{
  display: flex;
-//  width: 80%;
  
   &__item{
    display: flex;
@@ -31,8 +30,14 @@
     background-color: $color-primary;
     border-radius: 5%;
     i{
+     margin: 0 1rem;
      color: white;
      font-size: 6rem;
+    }
+    img{
+      
+      color: white;
+      width: 6rem;
     }
    }
    &__text{
