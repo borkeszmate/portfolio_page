@@ -1,4 +1,15 @@
 <div class="row">
+  
+  <!-- If Project is not loaded -->
+  <div
+   class="project-details"
+   *ngIf="!isProjectLoaded"
+   >
+    <h5 class="project-details__project-body">Please select a project!</h5>
+   <p class="project-details__project-body">Please select a project! Use the filter to view projects by specific technology!</p>
+   
+
+  </div>
   <section
    id="project-details-section" 
    class="project-details"
