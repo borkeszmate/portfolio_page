@@ -16,12 +16,16 @@ import { ProjectsService } from './components/Webdev-projects/sevices/projects-s
 import { WebDevSkillsComponent } from './components/Webdev-projects/web-dev-skills/web-dev-skills.component';
 import { WebDevHeroSectionComponent } from './components/Webdev-projects/web-dev-hero-section/web-dev-hero-section.component';
 import { SectionRowComponent } from './components/Webdev-projects/section-row/section-row.component';
+import { CvComponent } from './components/cv/cv.component';
+import { ExperienceComponent } from './components/cv/experience/experience.component';
+
 
 
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'webdev-projects', component: WebdevProjectsComponent}
+  { path: 'webdev-projects', component: WebdevProjectsComponent},
+  {path: 'cv', component: CvComponent}
 ];
 
 
@@ -37,7 +41,9 @@ const appRoutes: Routes = [
     WebdevProjectsComponent,
     WebDevSkillsComponent,
     WebDevHeroSectionComponent,
-    SectionRowComponent
+    SectionRowComponent,
+    CvComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
