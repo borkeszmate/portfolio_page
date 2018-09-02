@@ -1,5 +1,8 @@
 
+
+
 <div class="row">
+  
   <!-- All projects -->
 <section id="project-list">
   <div class="headings">
@@ -11,6 +14,7 @@
     </div>
   </div>
   
+
   <!-- Actual active filtering -->
   <div class="project-filtering">
     <div
@@ -23,8 +27,13 @@
         </li>
       </ul>
     </div>
+
+
 <!-- Inactive filtering -->
-<div class="project-filtering__ProjectTechnologies" >
+<div 
+  class="project-filtering__ProjectTechnologies"
+  data-aos="fade-left"
+  >
       <ul *ngFor="let ProjectTechnology of ProjectTechnologies">
         <li
         [ngStyle]="{'display' : FilterByTechArr.includes(ProjectTechnology) ? 'none' : 'block' }"
@@ -39,11 +48,13 @@
   <div 
     *ngIf="!isFiltered"
     class="projects-list"
+    data-aos="fade-right"
     >
     <h4>Please, select from the Projects below!</h4>
     <ul class="projects-list__container">
-    <li *ngFor="let Project of Projects; let i = index" class="projects-list__container__item"
-    (click)="getClickedProject(i)"
+    <li
+     *ngFor="let Project of Projects; let i = index" class="projects-list__container__item"
+     (click)="getClickedProject(i)"
     >
     <a 
     href="/webdev-projects#project-details-section"

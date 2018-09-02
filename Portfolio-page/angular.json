@@ -28,10 +28,11 @@
               }
             ],
             "styles": [
-              "src/sass/styles.scss",
-              "node_modules/font-awesome/scss/font-awesome.scss"
+              "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {

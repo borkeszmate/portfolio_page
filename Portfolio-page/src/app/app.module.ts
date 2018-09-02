@@ -15,6 +15,7 @@ import { WebdevProjectsComponent } from './components/webdev-projects/webdev-pro
 import { ProjectsService } from './components/Webdev-projects/sevices/projects-service.service';
 import { WebDevSkillsComponent } from './components/Webdev-projects/web-dev-skills/web-dev-skills.component';
 import { WebDevHeroSectionComponent } from './components/Webdev-projects/web-dev-hero-section/web-dev-hero-section.component';
+import { SectionRowComponent } from './components/Webdev-projects/section-row/section-row.component';
 
 
 
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     ProjectDetailsComponent,
     WebdevProjectsComponent,
     WebDevSkillsComponent,
-    WebDevHeroSectionComponent
+    WebDevHeroSectionComponent,
+    SectionRowComponent
   ],
   imports: [
     BrowserModule,
