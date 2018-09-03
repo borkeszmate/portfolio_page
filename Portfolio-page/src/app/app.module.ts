@@ -18,6 +18,7 @@ import { WebDevHeroSectionComponent } from './components/Webdev-projects/web-dev
 import { SectionRowComponent } from './components/Webdev-projects/section-row/section-row.component';
 import { CvComponent } from './components/cv/cv.component';
 import { ExperienceComponent } from './components/cv/experience/experience.component';
+import { PersonalComponent } from './components/cv/personal/personal.component';
 
 
 
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     WebDevHeroSectionComponent,
     SectionRowComponent,
     CvComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    PersonalComponent
   ],
   imports: [
     BrowserModule,
