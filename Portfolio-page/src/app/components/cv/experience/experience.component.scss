@@ -10,10 +10,67 @@ h1{
   color: $color-primary;
  }
 }
+
+.all-experiences-container{
+ display: flex;
+ justify-content: space-between;
+ 
+}
+
+.line{
+ flex: 0 0 10%;
+ // background-color: hotpink;
+ display: flex;
+ flex-direction: column;
+ 
+ &__icon-circle-container{
+  position: relative;
+  background-color: blue;
+  i{
+   position: absolute;
+   top: 2.2rem;
+   left: 50%;
+   z-index: 10;
+   transform: translateX(-50%);
+   color: white;
+   font-size: 3rem;
+  }
+  svg{
+   position: absolute;
+   top: 5px;
+   left: 50%;
+   z-index: 1;
+   transform: translateX(-3.5rem);
+   circle{
+    fill: $color-primary;
+   }
+  }
+
+ }
+
+ &__svg-line-container{
+  background-color: $color-primary;
+  height: 100%;
+  width: 3%;
+  margin: 2rem auto;
+ }
+ 
+
+}
+
+
+
+.all-experiences-container{
+ // flex: 0 0 80%;
+ // background-color: rgb(163, 224, 41);
+ 
+}
+
 .experience{
  display: flex;
  // background-color: pink;
- margin: 5rem 0 ; 
+ margin: 5rem 0 5rem 5rem ; 
+
 
  &__left{
   flex: .4;
