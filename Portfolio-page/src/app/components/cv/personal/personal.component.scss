@@ -4,3 +4,27 @@
 @import '~sass/animations';
 @import '~sass/mixins';
 
+
+.personal{
+  display: flex;
+
+  &__details{
+    flex: 0 0 50%;
+    background-color: red;
+    
+  }
+
+  &__image{
+    flex: 1;
+    
+    &__container{
+      text-align: center;
+      img{
+        border-radius: 100%;
+        width: 50%;
+        border: .2rem solid black;
+      }
+    }
+  }
+
+}
