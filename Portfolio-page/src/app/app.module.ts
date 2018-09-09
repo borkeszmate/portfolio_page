@@ -19,6 +19,10 @@ import { SectionRowComponent } from './components/Webdev-projects/section-row/se
 import { CvComponent } from './components/cv/cv.component';
 import { ExperienceComponent } from './components/cv/experience/experience.component';
 import { PersonalComponent } from './components/cv/personal/personal.component';
+import { OnlineMarketingComponent } from './components/online-marketing/online-marketing.component';
+import { IntroComponent } from './components/online-marketing/intro/intro.component';
+import { AuchanComponent } from './components/online-marketing/auchan/auchan.component';
+import { LeaseplanComponent } from './components/online-marketing/leaseplan/leaseplan.component';
 
 
 
@@ -26,7 +30,9 @@ import { PersonalComponent } from './components/cv/personal/personal.component';
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'webdev-projects', component: WebdevProjectsComponent},
-  {path: 'cv', component: CvComponent}
+  { path: 'cv', component: CvComponent },
+  { path: 'online-marketing', component: OnlineMarketingComponent}
+
 ];
 
 
@@ -45,7 +51,11 @@ const appRoutes: Routes = [
     SectionRowComponent,
     CvComponent,
     ExperienceComponent,
-    PersonalComponent
+    PersonalComponent,
+    OnlineMarketingComponent,
+    IntroComponent,
+    AuchanComponent,
+    LeaseplanComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,8 @@
 
 .personal{
   display: flex;
+  // border: solid 3px $color-primary;
+  // padding: 2rem;
 
   &__details{
     flex: 0 0 70%;
@@ -33,7 +35,7 @@
       i{
         margin-right: 1rem;
         color: $color-primary;
-        font-size: 4rem;
+        font-size: 3rem;
       }
 
       &__link{
