@@ -14,7 +14,7 @@ h1{
 .all-experiences-container{
  display: flex;
  justify-content: space-between;
- 
+ margin: 2rem 0 10rem 0;
 }
 
 .line{
@@ -26,6 +26,7 @@ h1{
  &__icon-circle-container{
   position: relative;
   background-color: blue;
+  
   i{
    position: absolute;
    top: 2.2rem;
@@ -35,15 +36,18 @@ h1{
    color: white;
    font-size: 3rem;
   }
+
   svg{
    position: absolute;
    top: 5px;
    left: 50%;
    z-index: 1;
    transform: translateX(-3.5rem);
+  
    circle{
     fill: $color-primary;
    }
+
   }
 
  }
@@ -124,41 +128,54 @@ hr{
 
 
 .education-and-skills{
+
   display: flex;
+  // justify-content: center;
+  // background-color: red;
+
 }
 
 .education-all{
+  flex: 0 0 50%;
   display: flex;
+  
 
+}
+
+.skills-all{
+  flex: 1;
+  display: flex;
+  // background-color: palegreen;
 }
 
 
 
 .line-small{
-   flex: 0 0 10%;
- // background-color: hotpink;
+ flex: 0 0 10%;
+//  background-color: hotpink;
  display: flex;
  flex-direction: column;
- height: 50rem;
+ height: 100%;
  
  &__icon-circle-container{
+  // flex: 0 0 90%;
   position: relative;
   background-color: blue;
   i{
    position: absolute;
-   top: 2.2rem;
+   top: 1.45rem;
    left: 50%;
    z-index: 10;
    transform: translateX(-50%);
    color: white;
-   font-size: 3rem;
+   font-size: 2rem;
   }
   svg{
    position: absolute;
    top: 5px;
    left: 50%;
    z-index: 1;
-   transform: translateX(-3.5rem);
+   transform: translateX(-2rem);
    circle{
     fill: $color-primary;
    }
@@ -169,8 +186,101 @@ hr{
  &__svg-line-container{
   background-color: $color-primary;
   height: 100%;
-  width: 3%;
+  width: 5%;
   margin: 2rem auto;
  }
  
+}
+
+.education{
+  padding: 1rem 3rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &__school{
+    margin: 1rem 0;
+    h4{
+      color: $color-primary;
+      font-size: 2.5rem;
+    }
+    h5{
+      font-size: 1.6rem;
+      color: $color-primary;
+      font-weight: 300;
+    }
+    p{
+      font-size: 2rem;
+      color: black;
+      font-weight: 300;
+    }
+
+  }
+
+  &__languages{
+    margin: 2rem 0;
+    h4{
+      color: black;
+      font-size: 2.5rem;
+    }
+    li{
+      text-decoration: none;
+      list-style-type: none;
+      font-size: 1.6rem;
+      margin: .6rem 0;
+      span{
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.skills{
+  padding: 1rem 0rem 1rem 1rem;
+  margin: 1rem 0;
+
+
+
+  &__online-marketing-web-dev{
+     
+    h4{
+      font-size: 2.5rem;
+      color: black;
+    }
+
+    ul:not(:last-child){
+      margin-bottom: 5rem;
+      
+    }
+
+    li{
+      // padding: .5rem 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: 1rem 0;
+      // background-color: magenta;
+      
+      span{
+        flex: 1;
+        font-weight: 500;
+        // background-color: khaki;
+        color: black;
+        list-style-type:none;
+        font-size: 1.5rem;
+      }
+
+      .icon-container{
+        flex: 0 0 60%;  
+      }
+
+      i{
+        color: $color-primary;
+        font-size: 2.2rem;
+        margin: 0 .5rem;
+      }
+
+    }
+  }
 }

@@ -9,9 +9,50 @@
   display: flex;
 
   &__details{
-    flex: 0 0 50%;
-    background-color: red;
+    flex: 0 0 70%;
+    // background-color: red;
+    padding: 2rem 3rem;
+
+    h1{
+      font-size: 5rem;
+    }
+    h2{
+      font-size: 2.4rem;
+      color: $color-primary;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    &__email-phone{
+      display: flex;
+      padding: .6rem 2rem .6rem 0;
+      font-size: 2rem;
+      align-items: center;
+      // background-color: red;
+      
+      i{
+        margin-right: 1rem;
+        color: $color-primary;
+        font-size: 4rem;
+      }
+
+      &__link{
+       text-decoration: none;
+       color: black; 
+      }
+    }
     
+    &__social{
+      display: flex;
+      margin: 1rem 2rem 1rem 0;
+      font-size: 4rem;
+      // background-color: red;
+
+      &__item{
+        margin-right: 2rem;
+        color: $color-primary;
+      }
+    }
   }
 
   &__image{
@@ -21,7 +62,7 @@
       text-align: center;
       img{
         border-radius: 100%;
-        width: 50%;
+        width: 100%;
         border: .2rem solid black;
       }
     }
