@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+
+
 /* COMPONENTS */
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
@@ -11,8 +14,6 @@ import { SplitScreenComponent } from './components/homepage/split-screen/split-s
 import { ProjectDetailsComponent } from './components/Webdev-projects/project-details/project-details.component';
 import { WebdevProjectsComponent } from './components/webdev-projects/webdev-projects.component';
 
-/* SERVICES */
-import { ProjectsService } from './components/Webdev-projects/sevices/projects-service.service';
 import { WebDevSkillsComponent } from './components/Webdev-projects/web-dev-skills/web-dev-skills.component';
 import { WebDevHeroSectionComponent } from './components/Webdev-projects/web-dev-hero-section/web-dev-hero-section.component';
 import { SectionRowComponent } from './components/Webdev-projects/section-row/section-row.component';
@@ -25,6 +26,8 @@ import { AuchanComponent } from './components/online-marketing/auchan/auchan.com
 import { LeaseplanComponent } from './components/online-marketing/leaseplan/leaseplan.component';
 
 
+/* SERVICES */
+import { ProjectsService } from './components/Webdev-projects/sevices/projects-service.service';
 
 
 const appRoutes: Routes = [
@@ -59,7 +62,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [
     ProjectsService

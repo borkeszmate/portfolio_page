@@ -1,6 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Project } from '../../../Models/Project/ProjectModel';
 import { Subject } from 'rxjs/subject';
+import { HttpClient } from '@angular/common/http';
+
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class ProjectsService {
@@ -65,8 +70,16 @@ Projects: Project[] = [
 
 ];
 
+  dataBaseUrl = 'https://bm-portfolio-575fe.firebaseio.com/projects.json';
+
 ProjectSubject: Subject<any> = new Subject();
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  public sendData(data: Project[]) {
+   return this.http.post(this.dataBaseUrl, data);
+  }
+
+
 
 }

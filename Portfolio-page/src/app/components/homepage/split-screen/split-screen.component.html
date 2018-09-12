@@ -2,7 +2,7 @@
   <div class="split-screen__left">
     <div class="split-screen__left__overlay">
       <div class="split-screen__left__overlay__text">
-        <h5><a routerling="/webdev-projects"></a>Web development</h5>
+        <h5><a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active">Web development</a></h5>
         <h6>Check out my web development projects, and don't forget to read my code on Github!</h6>
       </div>
     </div>
@@ -11,7 +11,7 @@
   <div class="split-screen__right">
       <div class="split-screen__right__overlay">
         <div class="split-screen__right__overlay__text">
-          <h5>Online marketing</h5>
+          <h5> <a [routerLink]="['/online-marketing']" routerLinkActive="router-link-active"  >Online marketing</a> </h5>
           <h6>Learn more about my expertise and skill on the field of online marketing</h6>
           
         </div>

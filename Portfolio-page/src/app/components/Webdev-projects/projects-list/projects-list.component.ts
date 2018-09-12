@@ -1,6 +1,8 @@
-  import { Component, OnInit, ElementRef } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 import { Project } from '../../../Models/Project/ProjectModel';
 import { ProjectsService } from '../sevices/projects-service.service';
+import { Observable } from 'rxjs/observable';
+
 
 @Component({
   selector: 'app-projects-list',
@@ -31,7 +33,15 @@ export class ProjectsListComponent implements OnInit {
   ngOnInit() {
     this.Projects = this.Projects_Service.Projects;
     this.gettingUniqueTechnologies();
-    console.log(this.ProjectTechnologies);
+    // console.log(this.ProjectTechnologies);
+
+  //  this.Projects_Service.sendData(this.Projects).subscribe(response => {
+  //    console.log(response);
+  //    },
+  //    err => {
+  //      console.log(err);
+  //    }
+  //  );
 
 
   }

@@ -6,9 +6,24 @@
     <div class="nav__logo-box"></div>
     <div class="nav__navigation">
       <ul class="nav__navigation__nav-container">
-        <li class="nav__navigation__nav-container__nav-item"><a href="#">Webdev Work</a></li>
-        <li class="nav__navigation__nav-container__nav-item"><a href="#">Online Marketing Work</a></li>
-        <li class="nav__navigation__nav-container__nav-item"><a href="#">CV</a></li>
+        
+        <li class="nav__navigation__nav-container__nav-item">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+        </li>
+
+        <li class="nav__navigation__nav-container__nav-item">
+          <a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active" >Webdev Work</a>
+        </li>
+
+        <li class="nav__navigation__nav-container__nav-item">
+          <a [routerLink]="['/online-marketing']" routeLinkActive="router-link-active" >Online Marketing Work</a>
+        </li>
+
+        <li class="nav__navigation__nav-container__nav-item">
+          <a [routerLink]="['/cv']" routerLinkActive="router-link-active" >CV</a>
+        </li>
+
+
         <li class="nav__navigation__nav-container__nav-item">
           <div class="nav__navigation__nav-container__nav-item__hamburger">
             <input id="navtoggle" type="checkbox" class="nav__hamburger-menu__checkbox">
@@ -19,6 +34,7 @@
             </div>
           </div>
         </li>
+
       </ul>
     </div>  
   </section>
