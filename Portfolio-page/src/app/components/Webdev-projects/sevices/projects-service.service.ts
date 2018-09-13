@@ -3,13 +3,17 @@ import { Project } from '../../../Models/Project/ProjectModel';
 import { Subject } from 'rxjs/subject';
 import { HttpClient } from '@angular/common/http';
 
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/of';
-import { Observable } from 'rxjs';
+import { Observable, observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { from } from 'rxjs';
+
+
 
 @Injectable()
 export class ProjectsService {
 
+  Projects: Project[];
+  /*
 Projects: Project[] = [
   {
     name: 'Coding Space',
@@ -69,16 +73,34 @@ Projects: Project[] = [
   }
 
 ];
+*/
 
-  dataBaseUrl = 'https://bm-portfolio-575fe.firebaseio.com/projects.json';
 
-ProjectSubject: Subject<any> = new Subject();
+  dataBaseUrl = 'https://bm-portfolio-575fe.firebaseio.com/projects/-LM9HXyn2IoOqRbaXWNx.json';
+
+
+
+  ProjectSubject: Subject<any> = new Subject();
 
   constructor(private http: HttpClient) { }
 
+  // Http requests
   public sendData(data: Project[]) {
    return this.http.post(this.dataBaseUrl, data);
   }
+
+  public getData() {
+    return this.http.get(this.dataBaseUrl).pipe(
+      map((response) => {
+        const data = response;
+        return data;
+
+      })
+    );
+
+  }
+
+
 
 
 
