@@ -36,15 +36,13 @@ export class ProjectsListComponent implements OnInit {
     this.Projects = this.Projects_Service.getData().subscribe((response) => {
 
       this.Projects = response;
+      this.gettingUniqueTechnologies();
+      console.log(this.ProjectTechnologies);
       console.log(this.Projects);
-
-
-
-
+      
     });
-
-
-    // this.gettingUniqueTechnologies();
+    
+    
     // console.log(this.ProjectTechnologies);
 
   //  this.Projects_Service.sendData(this.Projects).subscribe(response => {
@@ -80,7 +78,7 @@ export class ProjectsListComponent implements OnInit {
   public gettingUniqueTechnologies() {
     // Getting project technologies from Projects service
     let ProjectTechArr;
-    ProjectTechArr = this.Projects_Service.Projects
+    ProjectTechArr = this.Projects
       .map(project => project.technologies);
     ProjectTechArr = ProjectTechArr.reduce((a, b) => {
       return a.concat(b);
