@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Project } from '../../../Models/Project/ProjectModel';
 import { Subject } from 'rxjs/subject';
 import { HttpClient } from '@angular/common/http';
@@ -89,12 +89,11 @@ Projects: Project[] = [
    return this.http.post(this.dataBaseUrl, data);
   }
 
-  public getData() {
+  public getData(): Observable<any> {
     return this.http.get(this.dataBaseUrl).pipe(
       map((response) => {
         const data = response;
         return data;
-
       })
     );
 

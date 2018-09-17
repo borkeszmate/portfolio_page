@@ -4,6 +4,7 @@ import { ProjectsService } from '../sevices/projects-service.service';
 import { Observable } from 'rxjs/observable';
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
+import 'rxjs/add/operator/map';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { map } from 'rxjs/operators';
 })
 export class ProjectsListComponent implements OnInit {
 
-  Projects;
+  Projects: Project[];
 
   ClickedProject: Project = {
     name: '',
@@ -33,16 +34,15 @@ export class ProjectsListComponent implements OnInit {
   constructor( private Projects_Service: ProjectsService) { }
 
   ngOnInit() {
-    this.Projects = this.Projects_Service.getData().subscribe((response) => {
-
+    this.Projects_Service.getData()
+    .subscribe((response) => {
       this.Projects = response;
       this.gettingUniqueTechnologies();
-      console.log(this.ProjectTechnologies);
-      console.log(this.Projects);
-      
-    });
-    
-    
+    },
+    (err) => {console.log(err); }
+    );
+
+
     // console.log(this.ProjectTechnologies);
 
   //  this.Projects_Service.sendData(this.Projects).subscribe(response => {
