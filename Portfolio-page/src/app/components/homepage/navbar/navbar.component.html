@@ -1,4 +1,29 @@
 
+<div 
+  class="opened-navbar"
+  *ngIf="isToggled"
+
+  id="open-navbar"
+>
+  <div 
+    class="opened-navbar__container">
+    <div class="opened-navbar__container__navigation">
+     
+      <div class="opened-navbar__container__navigation__close">
+        <button (click)="navClick()">Close</button>
+      </div>
+
+      <div class="opened-navbar__container__navigation__menu">
+        <ul>
+          <li>url</li>
+          <li>url</li>
+          <li>url</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <section class="nav">
@@ -27,8 +52,8 @@
         <li class="nav__navigation__nav-container__nav-item">
           <div class="nav__navigation__nav-container__nav-item__hamburger">
             <input id="navtoggle" type="checkbox" class="nav__hamburger-menu__checkbox">
-            <label for="navtoggle">
-              <i class="fas fa-ellipsis-h"></i>
+            <label for="navtoggle" (click)="navClick()">
+              <i class="fas fa-ellipsis-h" ></i>
             </label>
             <div class="nav__navigation__nav-container__nav-item__hamburger__background">            
             </div>

@@ -11,6 +11,7 @@
  display: flex;
  border-bottom: 2px solid black;
  justify-content: space-between;
+
   
   &__logo-box{
     background-color: black;
@@ -69,35 +70,31 @@
 
 
       input{
-      //  display: none;
+       display: none;
       list-style: none;
       }
 
       input:checked ~ label {
 
-        background-color: $color-primary;
-        transform: scale(70);
-      
+        // background-color: $color-primary;
+        // transform: scale(70);
+      z-index: 200;
         i{
           display: inline-block;
           transition: all .5s;
           transform: rotate(-90deg);
           font-size: 4rem;
           // color: red;
+          z-index: 200;
 
-      }
-
-      input:checked + div{
-        height: 10rem;
-        width: 10rem;
-        background-color: red;
-      }
+        }
         
       }
 
       i{
        font-size: 4rem;
        color: black;
+       z-index: 200;
 
       }
 
@@ -123,6 +120,50 @@
    }
   }
 
+}
+
+.opened-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  animation-name: moveLeft;
+  animation-duration: 1s;
+  background-color: $color-primary;
+  z-index: 50;
+  
+
+  
+  &__container{
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    display: flex;
+    transition: all 1s;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    margin-top: 40vh;
+    
+    &__navigation{
 
 
+      &__close{
+        background-color: red;
+      }
+      &__menu{
+        background-color: pink;
+        li{
+          list-style-type: none;
+        }
+      }
+      
+    }
+
+
+  }
 }
