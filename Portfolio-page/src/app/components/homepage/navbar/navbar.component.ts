@@ -10,23 +10,22 @@ export class NavbarComponent implements OnInit {
 
 
   isToggled = false;
-  openedNav;
+  menuIcon;
   constructor() { }
 
   ngOnInit() {
-    // this.openedNav = document.querySelector("#open-navbar");
-    // this.openedNav.style.display = "none";
+    this.menuIcon = document.querySelector("#menuIcon");
   }
 
   public navClick() {
     this.isToggled = !this.isToggled;
-    console.log(this.isToggled);
+    if (this.isToggled === false) {
+      this.menuIcon.style.transform = 'rotate(-180deg)';
+    } else {
+      this.menuIcon.style.transform = 'rotate(90deg)';
+    }
 
-    // if (this.isToggled) {
-    //   this.openedNav.style.display = "block";
-    // } else {
-    //   this.openedNav.style.display = "none";
-    // }
+
   }
 
 }

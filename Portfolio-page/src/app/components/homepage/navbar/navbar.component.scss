@@ -78,23 +78,21 @@
 
         // background-color: $color-primary;
         // transform: scale(70);
-      z-index: 200;
+      
         i{
-          display: inline-block;
-          transition: all .5s;
           transform: rotate(-90deg);
           font-size: 4rem;
           // color: red;
-          z-index: 200;
-
         }
         
       }
-
+      
       i{
-       font-size: 4rem;
-       color: black;
-       z-index: 200;
+        display: inline-block;
+        transition: all .5s;
+        font-size: 4rem;
+        color: black;
+        z-index: 200;
 
       }
 
