@@ -2,23 +2,39 @@
 <div 
   class="opened-navbar"
   *ngIf="isToggled"
-
   id="open-navbar"
 >
+  <div class="opened-navbar__times" (click)="navClick()">
+    <i class="fas fa-times"></i>
+  </div>
+  
   <div 
     class="opened-navbar__container">
     <div class="opened-navbar__container__navigation">
-     
-      <div class="opened-navbar__container__navigation__close">
-        <button (click)="navClick()">Close</button>
-      </div>
 
       <div class="opened-navbar__container__navigation__menu">
+        
         <ul>
-          <li>url</li>
-          <li>url</li>
-          <li>url</li>
+
+          <li class="opened-navbar__container__navigation__menu__item">
+            <a [routerLink]="['/']" routerLinkActive="router-link-active"
+            >Home</a>
+          </li>
+          
+          <li class="opened-navbar__container__navigation__menu__item">
+            <a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active">Webdev Work</a>
+          </li>
+          
+          <li class="opened-navbar__container__navigation__menu__item">
+            <a [routerLink]="['/online-marketing']" routeLinkActive="router-link-active">Online Marketing Work</a>
+          </li>
+          
+          <li class="opened-navbar__container__navigation__menu__item">
+            <a [routerLink]="['/cv']" routerLinkActive="router-link-active">CV</a>
+          </li>
+
         </ul>
+
       </div>
       
     </div>
