@@ -28,6 +28,8 @@ import { LeaseplanComponent } from './components/online-marketing/leaseplan/leas
 
 /* SERVICES */
 import { ProjectsService } from './components/Webdev-projects/sevices/projects-service.service';
+import { FooterComponent } from './components/homepage/footer/footer.component';
+
 
 
 const appRoutes: Routes = [
@@ -58,7 +60,8 @@ const appRoutes: Routes = [
     OnlineMarketingComponent,
     IntroComponent,
     AuchanComponent,
-    LeaseplanComponent
+    LeaseplanComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

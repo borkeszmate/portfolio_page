@@ -1,0 +1,42 @@
+@import '~sass/base';
+@import '~sass/variables';
+@import '~sass/utilities';
+@import '~sass/animations';
+@import '~sass/mixins';
+
+
+.footer{
+ width: 100%;
+ background-color: black;
+ display: flex;
+ justify-content: space-around;
+ padding: 7rem 0;
+ 
+ &__copywrite{
+  font-size: 3rem;
+  color: white;
+  }
+
+  &__navigation{
+   ul{
+    display: flex;
+
+   }
+   &__item{
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0 2rem;
+    
+    a{
+     font-size: 2rem;
+     color: white;
+     text-decoration: none;
+
+    }
+
+
+   }
+
+  }
+
+}
