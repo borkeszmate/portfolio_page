@@ -23,6 +23,11 @@
  color:white;
  border: 2px solid  transparent;
  transition: all .3s;
+  @media only screen and (max-width: 30em) {
+  display: block;      
+  text-align: center;
+  margin: .4rem 0;
+  }    
 }
 .btn-primary:hover{
  padding: 1rem 2rem;
@@ -43,6 +48,11 @@
  color: $color-primary;
  border: 2px solid  $color-primary;
  transition: all .3s;
+  @media only screen and (max-width: 30em) {
+  display: block;      
+  text-align: center;
+  margin: .4rem 0;
+  }    
 }
 
 .btn-primary-outline:hover{
@@ -63,27 +73,22 @@
  color:white;
  border: 2px solid  transparent;
  transition: all .3s;
+  @media only screen and (max-width: 30em) {
+  display: block;      
+  text-align: center;
+  margin: .4rem 0;
+  }    
 }
-
 .btn-secondary:hover{
  padding: 1rem 2rem;
- background-color: transparent;
+ background-color:transparent;
  text-transform: uppercase;
  text-decoration: none;
- color:black;
+ color: black;
  border: 2px solid  black;
  transition: all .3s;
 }
 
-.btn-secondary-outline{
- padding: 1rem 2rem;
- background-color: transparent;
- text-transform: uppercase;
- text-decoration: none;
- color:black;
- border: 2px solid  black;
- transition: all .3s;
-}
 
 .btn-secondary-outline{
  padding: 1rem 2rem;
@@ -91,9 +96,26 @@
  text-transform: uppercase;
  text-decoration: none;
  color: black;
- border: 2px solid black;
+ border: 2px solid  black;
+ transition: all .3s;
+  @media only screen and (max-width: 30em) {
+  display: block;      
+  text-align: center;
+  margin: .4rem 0;
+  }    
+}
+
+.btn-secondary-outline:hover{
+ padding: 1rem 2rem;
+ background-color: black;
+ text-transform: uppercase;
+ text-decoration: none;
+ color:white;
+ border: 2px solid  transparent;
  transition: all .3s;
 }
+
+
 
 
 .spacing{

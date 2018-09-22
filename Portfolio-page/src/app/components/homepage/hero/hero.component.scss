@@ -8,13 +8,24 @@
 
 
 .hero{
-
+  
  display: flex;
  height: 90vh;
+
+ @media only screen and (max-width: 50em) {
+  flex-direction: column;
+  height: 100%;
+  
+ }
 
   &__photo{
    flex: 0 0 45%;
    width: 100%;
+    
+   @media only screen and (max-width: 50em) {
+      order: 1; 
+    }
+    
    img{
     width: 100%;
    }
@@ -29,6 +40,10 @@
    h1{
     font-size: 5rem;
     margin-bottom: 1rem;
+    
+      @media only screen and (max-width: 50em) {
+       font-size: 4rem;      
+      }
    }
    h2{
     color: $color-primary;
@@ -38,13 +53,18 @@
    p{
     font-size: 1.8rem;
     margin: .8rem 0;
+      @media only screen and (max-width: 50em) {
+      text-align: justify;      
+      }    
    }
 
    &__btn-container{
     margin: 2rem 0;
+    
     a{
      margin-right: 2rem;
      font-size: 2.5rem;
+     
     }
 
    }

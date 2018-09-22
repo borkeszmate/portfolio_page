@@ -6,6 +6,10 @@
 
 
 .split-screen{
+  @media only screen and (max-width: 50em) {
+    display: none;
+  }
+
  display: flex;
  justify-content: space-around;
  // background-color: tan;
@@ -138,4 +142,86 @@
     transition: all .5s;
    }
  }
+}
+
+.split-screen-mobile{
+
+  @media only screen and (min-width: 50em) {
+    display: none;
+  }
+  
+  &__web-dev{
+    position: relative;
+    background-image: url('../../../../assets/img/dev.jpeg');
+    background-position: center;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    height: 90vh;
+    
+     &__text{
+     position: absolute;
+     width: 100%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+     background-color: rgba($color: #000000, $alpha: .25);
+     
+
+     h5{
+       font-size: 3.5rem;
+       a{
+         text-decoration: none;
+         color: white;
+         transition: all .3s;
+       }
+     }
+ 
+     h6{
+     color: white;
+     font-size: 2rem;
+     font-weight: 300;
+     }
+    
+    }
+
+  }
+
+  &__online-marketing{
+    background-image: url('../../../../assets/img/online_marketing_2.jpg');
+    background-position: center;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 90vh;
+    align-items: center;
+    position: relative;
+
+    &__text{
+     position: absolute;
+     width: 100%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+     background-color: rgba($color: #000000, $alpha: .25);
+     padding: 1rem 1rem;
+
+     h5{
+       font-size: 3.5rem;
+       a{
+         text-decoration: none;
+         color: white;
+         transition: all .3s;
+       }
+     }
+ 
+     h6{
+      color: white;
+      font-size: 2rem;
+      font-weight: 300;
+     }
+    
+    }
+  }
 }
