@@ -25,11 +25,15 @@
   display: flex;
   justify-content: space-between;
   margin: 2rem 0rem;
+  @media only screen and (max-width: 50em) {
+    flex-direction: column;
+  }
     &__filteredBy{
     // margin: 1rem 2rem; 
     // background-color: $color-gray-1;
     display: flex;
     flex-wrap: wrap;
+    order: 1;
    
    &__item{
    padding: 1rem 1rem;
