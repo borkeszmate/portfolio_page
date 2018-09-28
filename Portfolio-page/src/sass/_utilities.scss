@@ -12,6 +12,10 @@
 .md-row{
  width: 70%;
  margin: 4rem auto;
+ @media only screen and (max-width: 50em) {
+  width: 95%;
+  margin: 2rem auto;
+ }
 }
 
 /*BTN SHORTCUTS*/
@@ -124,4 +128,23 @@
  margin: 5rem auto;
  border-top: solid .2rem $color-gray-4;
  // background-color: red;
+}
+
+.small-display-only{
+display: none;
+@media only screen and (max-width: 40em) {
+   display: block;
+ } 
+}
+
+.medium-display-none{
+  @media only screen and (max-width: 60em) {
+   display: none !important;
+  }
+ } 
+
+.small-display-none{
+ @media only screen and (max-width: 40em) {
+   display: none;
+ } 
 }

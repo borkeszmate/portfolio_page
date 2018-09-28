@@ -9,6 +9,9 @@
   display: flex;
   // border: solid 3px $color-primary;
   // padding: 2rem;
+  @media only screen and (max-width: 40em) {
+    flex-direction: column;
+  }
 
   &__details{
     flex: 0 0 70%;
@@ -61,11 +64,16 @@
     flex: 1;
     
     &__container{
+      
       text-align: center;
+      // background-color: red;
       img{
         border-radius: 100%;
         width: 100%;
         border: .2rem solid black;
+        @media only screen and (max-width: 40em) {
+          width: 80%;
+        }
       }
     }
   }
