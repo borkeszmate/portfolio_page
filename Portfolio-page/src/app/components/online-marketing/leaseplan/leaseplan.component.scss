@@ -6,8 +6,15 @@
 
 .hero{
  display: flex;
+ @media only screen and (max-width: 50em) {
+   flex-direction: column;
+ }
   &__image{
    flex: 0 0 50%;
+  
+   @media only screen and (max-width: 50em) {
+   order: 1;
+   } 
 
    img{
     width: 100%;
@@ -17,6 +24,11 @@
   &__text{
    flex: 1;
    padding: 0 3rem;
+  
+   @media only screen and (max-width: 50em) {
+   padding: 0;
+   margin-bottom: 2rem;
+   } 
 
    &__headline{
     color: $color-primary;
@@ -26,7 +38,7 @@
    &__paragh{
     margin-top: 1rem;
     text-align: justify;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
 
    }
   }
@@ -57,3 +69,4 @@
  }
 
 }
+
