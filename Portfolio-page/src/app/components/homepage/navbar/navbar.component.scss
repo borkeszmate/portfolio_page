@@ -131,6 +131,7 @@
   animation-duration: 1s;
   background-color: $color-primary;
   z-index: 50;
+  overflow-x: hidden;
 
   &__times{
     text-align: right;

@@ -3,11 +3,12 @@
  margin: 0;
  padding: 0;
  box-sizing: inherit;
-
+ 
 }
 
 html{
  font-size: 62.5%;
+ overflow-x: hidden;
  @media only screen and (max-width: 60em) {
   font-size: 50%;
  }
