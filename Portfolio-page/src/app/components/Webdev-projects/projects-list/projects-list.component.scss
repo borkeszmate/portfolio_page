@@ -33,7 +33,11 @@
     // background-color: $color-gray-1;
     display: flex;
     flex-wrap: wrap;
-    order: 1;
+    @media only screen and (max-width: 50em) {
+      order: 1;
+      margin: 3rem 0;
+      
+    }
    
    &__item{
    padding: 1rem 1rem;
