@@ -1,4 +1,5 @@
 
+<!-- Full screen mobile navigation -->
 <div 
   class="opened-navbar"
   *ngIf="isToggled"
@@ -17,20 +18,23 @@
         <ul>
 
           <li class="opened-navbar__container__navigation__menu__item">
-            <a [routerLink]="['/']" routerLinkActive="router-link-active"
+            <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}"
             >Home</a>
           </li>
           
           <li class="opened-navbar__container__navigation__menu__item">
-            <a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active">Webdev Work</a>
+            <a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact : true}">Webdev Work</a>
           </li>
           
           <li class="opened-navbar__container__navigation__menu__item">
-            <a [routerLink]="['/online-marketing']" routeLinkActive="router-link-active">Online Marketing Work</a>
+            <a
+             [routerLink]="['/online-marketing']" routerLinkActive="router-link-active"
+             [routerLinkActiveOptions]="{exact : true}"> Online Marketing Work
+            </a>
           </li>
           
           <li class="opened-navbar__container__navigation__menu__item">
-            <a [routerLink]="['/cv']" routerLinkActive="router-link-active">CV</a>
+            <a [routerLink]="['/cv']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact : true}">CV</a>
           </li>
 
         </ul>
@@ -41,6 +45,7 @@
   </div>
 </div>
 
+<!-- Desktop navigation -->
 <div class="row">
   <section class="nav">
     
@@ -49,19 +54,19 @@
       <ul class="nav__navigation__nav-container">
         
         <li class="nav__navigation__nav-container__nav-item">
-          <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+          <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}" >Home</a>
         </li>
 
         <li class="nav__navigation__nav-container__nav-item">
-          <a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active" >Webdev Work</a>
+          <a [routerLink]="['/webdev-projects']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}" >Webdev Work</a>
         </li>
 
         <li class="nav__navigation__nav-container__nav-item">
-          <a [routerLink]="['/online-marketing']" routeLinkActive="router-link-active" >Online Marketing Work</a>
+          <a [routerLink]="['/online-marketing']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}" >Online Marketing Work</a>
         </li>
 
         <li class="nav__navigation__nav-container__nav-item">
-          <a [routerLink]="['/cv']" routerLinkActive="router-link-active" >CV</a>
+          <a [routerLink]="['/cv']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}" >CV</a>
         </li>
 
 

@@ -122,10 +122,13 @@ h1{
   flex: 1;
   // background-color: $color-blue-1;
   padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
   
   &__description{
-   font-size: 1.7rem;
+   font-size: 1.8rem;
    text-align: justify;
+   
 
   }
  }
