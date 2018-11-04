@@ -1,9 +1,9 @@
   import { Component, OnInit } from '@angular/core';
 import { Project } from '../../../Models/Project/ProjectModel';
 import { ProjectsService } from '../sevices/projects-service.service';
-import { Observable } from 'rxjs/observable';
-import { from } from 'rxjs';
-import { map } from 'rxjs/operators';
+// import { Observable } from 'rxjs/observable';
+// import { from } from 'rxjs';
+// import { map } from 'rxjs/operators';
 import 'rxjs/add/operator/map';
 
 
@@ -133,7 +133,7 @@ export class ProjectsListComponent implements OnInit {
       });
       this.checkIfFiltered();
 
-    }
+  }
 
     // Check if filtered
     public checkIfFiltered() {

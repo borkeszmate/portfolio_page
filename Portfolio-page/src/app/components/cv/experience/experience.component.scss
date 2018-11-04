@@ -15,6 +15,11 @@ h1{
  display: flex;
  justify-content: space-between;
  margin: 2rem 0 10rem 0;
+
+//  background-color: darkblue;
+ @media only screen and (max-width: 50em) {
+   margin: 2rem 0;
+ }
 }
 
 .line{
@@ -74,7 +79,7 @@ h1{
 
 .experience{
  display: flex;
- // background-color: pink;
+//  background-color: pink;
  margin: 5rem 0 5rem 5rem ; 
  @media only screen and (max-width: 40em) {
    flex-direction: column;
@@ -93,9 +98,9 @@ h1{
   &__position{
    // margin: 1rem 0;
    font-weight: 300;
-   font-size: 2rem;
+   font-size: 3rem;
    text-transform: uppercase;
-   // line-height: 2rem;
+   color: $color-primary;
 
 
   }
@@ -130,6 +135,11 @@ h1{
    font-size: 1.8rem;
    text-align: justify;
    
+   @media only screen and (max-width:50em) {
+     font-size: 2rem;
+     padding: 0 1rem;
+   }
+   
 
   }
  }
@@ -150,17 +160,18 @@ hr{
   @media only screen and (max-width: 40em) {
     flex-direction: column;
   }
-
+  
 }
 
 .education-all{
   flex: 0 0 50%;
   display: flex;
   
-
+  
 }
 
 .skills-all{
+  // background-color: firebrick;
   flex: 1;
   display: flex;
   // background-color: palegreen;
@@ -263,13 +274,16 @@ hr{
 .skills{
   padding: 1rem 0rem 1rem 1rem;
   margin: 1rem 0;
-  @media only screen and (max-width: 40em) {
+  // background-color: gold;
+  @media only screen and (max-width: 50em) {
     padding: 0;
+    width: 100%;
   }
 
 
 
   &__online-marketing-web-dev{
+
      
     h4{
       font-size: 2.5rem;
