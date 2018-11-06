@@ -23,7 +23,6 @@ import { PersonalComponent } from './components/cv/personal/personal.component';
 import { OnlineMarketingComponent } from './components/online-marketing/online-marketing.component';
 import { IntroComponent } from './components/online-marketing/intro/intro.component';
 import { AuchanComponent } from './components/online-marketing/auchan/auchan.component';
-import { LeaseplanComponent } from './components/online-marketing/leaseplan/leaseplan.component';
 
 
 /* SERVICES */
@@ -61,7 +60,6 @@ const appRoutes: Routes = [
     OnlineMarketingComponent,
     IntroComponent,
     AuchanComponent,
-    LeaseplanComponent,
     FooterComponent,
     SpendMonitorComponent
   ],
