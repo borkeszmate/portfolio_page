@@ -3,9 +3,8 @@ import { Project } from '../../../Models/Project/ProjectModel';
 import { Subject } from 'rxjs/subject';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, observable } from 'rxjs';
+import { Observable, observable, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { from } from 'rxjs';
 
 
 
@@ -80,7 +79,7 @@ Projects: Project[] = [
 
 
 
-  ProjectSubject: Subject<any> = new Subject();
+  ProjectSubject: Subject<any> = new ReplaySubject();
 
   constructor(private http: HttpClient) { }
 

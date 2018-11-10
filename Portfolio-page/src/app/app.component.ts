@@ -13,13 +13,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 // Router scroll to top
-    this.router.events.subscribe((evt) => {
+    // this.router.events.subscribe((evt) => {
 
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
+    //   if (!(evt instanceof NavigationEnd)) {
+    //     return;
+    //   }
+    //   window.scrollTo(0, 0);
+    // });
 
   }
 }

@@ -66,7 +66,7 @@ export class ProjectsListComponent implements OnInit {
     } else {
       this.ClickedProject = this.Projects[clickedProjectNumber];
     }
-    console.log(this.ClickedProject);
+    // console.log(this.ClickedProject);
 // Sending clicked project data to the Subject in the Service in order to allow project details component to subscribe to it.
     this.Projects_Service.ProjectSubject.next(this.ClickedProject);
   }
