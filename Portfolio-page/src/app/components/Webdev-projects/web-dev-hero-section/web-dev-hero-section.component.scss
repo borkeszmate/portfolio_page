@@ -37,40 +37,36 @@
   &__copy{
    display: flex;
    flex-direction: column;
-   // background-color: blue;
+  //  background-color: blue;
    justify-content: center;
    padding: 2rem 8rem;
-
-  @media only screen and (max-width: 50em) {
-   order: 1;
-   height: 100%;
-   padding: 1rem 1rem;
-   margin-top: 3rem;
-  }
-
-   
    h1{
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     @media only screen and (max-width: 50em) {
       font-size: 4rem;
     }
    }
-   h2{
-    color: $color-primary;
-    font-size:2.5rem;
-    font-weight: 300; 
-   }
+
    p{
     text-align: justify; 
-    // font-size: 1.8rem;
+    font-size: 1.8rem;
     margin: .8rem 0;
+ 
+    @media only screen and (max-width:50em) {
+      font-size: 2.3rem;
+    }
    }
-
-
-
-
+   @media only screen and (max-width: 50em) {
+    order: 1;
+    height: 100%;
+    padding: 1rem 1rem;
+    margin: 3rem 0;
+   //  background-color: red;
+ 
+   }
   }
+
 
 
 }

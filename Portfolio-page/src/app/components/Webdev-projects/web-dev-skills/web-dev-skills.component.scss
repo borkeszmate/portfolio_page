@@ -3,7 +3,9 @@
 @import '~sass/utilities';
 @import '~sass/animations';
 @import '~sass/mixins';
-
+.container{
+  margin: 2rem 0;
+}
 .title{
  text-align: center;
  margin: 5rem 0;
@@ -49,7 +51,10 @@
     }
     &__description{
       margin-top: .7rem;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
+      @media only screen and (max-width:50em) {
+        font-size: 2.3rem;
+      }
     }
    }
 
